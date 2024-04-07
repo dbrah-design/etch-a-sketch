@@ -1,1 +1,1 @@
-# etch-a-sketch
+The goal of this project is to make an etch a sketch using all the knowledge I've learned so far in TOP
