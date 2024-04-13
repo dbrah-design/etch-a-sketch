@@ -1,5 +1,5 @@
 const container = document.querySelector(".grid-container");
-const generateBtn = document.querySelector(".test-btn")
+const gridContainer = document.querySelector(".js-container");
 
 
 function generateSquare() {
@@ -9,14 +9,17 @@ function generateSquare() {
   container.appendChild(gridSquare)
 }
 
-generateBtn.addEventListener("click", generateSquare)
+gridContainer.addEventListener("mouseover", generateSquare);
 /*
 const gridSquare = document.createElement("div");
 gridSquare.classList.add("grid-square");
 gridSquare.style.backgroundColor = generateColor()
 
 container.appendChild(gridSquare)
+
 */
+// Potential way to get hover effect
+  // object.addEventListener("mouseover", myScript);
 
 function generateColor(){
   const hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
