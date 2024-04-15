@@ -1,21 +1,23 @@
-const container = document.querySelector(".grid-container");
 const gridContainer = document.querySelector(".js-container");
 
-
-function generateSquare() {
-  const gridSquare = document.createElement("div");
-  gridSquare.classList.add("grid-square");
-  gridSquare.style.backgroundColor = generateColor()
-  container.appendChild(gridSquare)
+function createSquare() {
+    const gridSquare = document.createElement("div");
+    gridSquare.classList.add("grid-square");
+    gridContainer.appendChild(gridSquare);
 }
 
-gridContainer.addEventListener("mouseover", generateSquare);
-/*
-const gridSquare = document.createElement("div");
-gridSquare.classList.add("grid-square");
+function generateGrid() {
+  for( i = 0; i < 256; i++) {
+     createSquare()
+  }
+}
+generateGrid()
+
+
+/* Way to add random color
+
 gridSquare.style.backgroundColor = generateColor()
 
-container.appendChild(gridSquare)
 
 */
 // Potential way to get hover effect
