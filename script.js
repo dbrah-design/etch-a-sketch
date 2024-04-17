@@ -13,13 +13,14 @@ function generateGrid() {
 }
 generateGrid()
 
-const gridSquare = document.querySelector(".grid-square");
+const gridSquares = document.querySelectorAll(".grid-square");
 
+/*
 gridSquare.addEventListener("mouseover", () => {
   gridSquare.style.backgroundColor = generateColor()
 })
 
-
+*/
 
 /* It seems when I console.log here the grids have been created already so I get something in console instead of null.
 
