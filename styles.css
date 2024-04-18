@@ -12,6 +12,7 @@ h1 {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  gap: 20px;
 }
 
 .grid-container {
