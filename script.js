@@ -1,4 +1,10 @@
 const gridContainer = document.querySelector(".js-container");
+const gridBtn = document.querySelector(".grid-btn");
+gridBtn.addEventListener("click", () => {
+  const test = prompt("Enter Something");
+  console.log(test)
+
+})
 
 function createSquare() {
     const div = document.createElement("div");
