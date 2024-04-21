@@ -6,18 +6,21 @@ gridBtn.addEventListener("click", () => {
 
 })
 
-function createSquare() {
+function createSquare(square) {
+    const squareLength = (500 - 2 * 2) / square;
     const div = document.createElement("div");
     div.classList.add("grid-square");
+    div.style.width = `${squareLength}px`
+    div.style.height = `${squareLength}px`
     gridContainer.appendChild(div);
 }
 
-function generateGrid() {
-  for( i = 0; i < 256; i++) {
-     createSquare()
+function generateGrid(size) {
+  for( i = 0; i < size; i++) {
+     createSquare(16)
   }
 }
-generateGrid()
+generateGrid(256)
 
 const gridSquares = document.querySelectorAll(".grid-square");
 
