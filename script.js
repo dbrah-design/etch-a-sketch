@@ -1,9 +1,13 @@
 const gridContainer = document.querySelector(".js-container");
 const gridBtn = document.querySelector(".grid-btn");
 gridBtn.addEventListener("click", () => {
-  const test = prompt("Enter Something");
-  console.log(test)
-
+  const test = prompt("How may numbers of squares per side? Choose a number between 2 to 100.");
+  if(test > 100 || test < 2) {
+    console.log("Number not valid. Please enter a number between 2 to 100")
+  } else {
+    console.log(test)
+  }
+  
 })
 
 function createSquare(square) {
