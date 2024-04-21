@@ -25,7 +25,5 @@ h1 {
 }
 
 .grid-square {
-  width: calc((500px - 2 * 2px) / 16);
-  height: calc((500px - 2 * 2px) / 16);
   border: 1px solid rgba(0, 0, 0, 0.758);
 }
