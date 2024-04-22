@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".js-container");
 const gridBtn = document.querySelector(".grid-btn");
+
 gridBtn.addEventListener("click", () => {
   const test = prompt("How may numbers of squares per side? Choose a number between 2 to 100.");
   if(test > 100 || test < 2) {
@@ -10,21 +11,20 @@ gridBtn.addEventListener("click", () => {
   
 })
 
-function createSquare(square) {
-    const squareLength = (500 - 2 * 2) / square;
+
+
+function generateGrid(size) {
+  for( i = 0; i < size * size; i++) {
+    const squareLength = (500 - 2 * 2) / size;
     const div = document.createElement("div");
     div.classList.add("grid-square");
     div.style.width = `${squareLength}px`
     div.style.height = `${squareLength}px`
     gridContainer.appendChild(div);
-}
-
-function generateGrid(size) {
-  for( i = 0; i < size; i++) {
-     createSquare(16)
   }
 }
-generateGrid(256)
+
+generateGrid(16)
 
 const gridSquares = document.querySelectorAll(".grid-square");
 
