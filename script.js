@@ -36,21 +36,6 @@ gridSquares.forEach((square) => {
 });
 
 
-/* It seems when I console.log here the grids have been created already so I get something in console instead of null.
-
-const colorChange = document.querySelector(".grid-square");
-console.log(colorChange);
-*/
-
-/* Way to add random color
-
-gridSquare.style.backgroundColor = generateColor()
-
-
-*/
-// Potential way to get hover effect
-  // object.addEventListener("mouseover", myScript);
-
 function generateColor(){
   const hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
   let code = "";
