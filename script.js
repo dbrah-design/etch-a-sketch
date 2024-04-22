@@ -1,19 +1,8 @@
 const gridContainer = document.querySelector(".js-container");
 const gridBtn = document.querySelector(".grid-btn");
 
-gridBtn.addEventListener("click", () => {
-  const test = prompt("How may numbers of squares per side? Choose a number between 2 to 100.");
-  if(test > 100 || test < 2) {
-    console.log("Number not valid. Please enter a number between 2 to 100")
-  } else {
-    console.log(test)
-  }
-  
-})
-
-
-
 function generateGrid(size) {
+  gridContainer.replaceChildren()
   for( i = 0; i < size * size; i++) {
     const squareLength = (500 - 2 * 2) / size;
     const div = document.createElement("div");
@@ -26,6 +15,16 @@ function generateGrid(size) {
 
 generateGrid(16)
 
+gridBtn.addEventListener("click", () => {
+  const squaresPerSide = prompt("How may numbers of squares per side? Choose a number between 2 to 100.");
+  if(squaresPerSide > 100 || squaresPerSide < 2) {
+    alert("Number not valid. Please enter a number between 2 to 100")
+  } else {
+    generateGrid(squaresPerSide)
+  }
+  
+})
+
 const gridSquares = document.querySelectorAll(".grid-square");
 
 gridSquares.forEach((square) => {
@@ -35,6 +34,7 @@ gridSquares.forEach((square) => {
   });
   
 });
+
 
 /* It seems when I console.log here the grids have been created already so I get something in console instead of null.
 
