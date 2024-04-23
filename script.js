@@ -28,7 +28,7 @@ generateGrid(16)
 
 gridBtn.addEventListener("click", () => {
   const squaresPerSide = prompt("How many number of squares per side? Choose a number between 2 to 100.");
-  if(squaresPerSide > 100 || squaresPerSide < 2) {
+  if(squaresPerSide > 100 || squaresPerSide < 2 || isNaN(squaresPerSide)) {
     alert("Number not valid. Please enter a number between 2 to 100.")
   } else {
     generateGrid(squaresPerSide)
