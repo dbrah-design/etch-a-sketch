@@ -6,11 +6,11 @@ function generateGrid(size) {
   
   for( i = 0; i < size * size; i++) {
     const squareLength = (500 - 2 * 2) / size;
-    const div = document.createElement("div");
-    div.classList.add("grid-square");
-    div.style.width = `${squareLength}px`
-    div.style.height = `${squareLength}px`
-    gridContainer.appendChild(div);
+    const squareDiv = document.createElement("div");
+    squareDiv.classList.add("grid-square");
+    squareDiv.style.width = `${squareLength}px`
+    squareDiv.style.height = `${squareLength}px`
+    gridContainer.appendChild(squareDiv);
   }
 
   const gridSquares = document.querySelectorAll(".grid-square");
